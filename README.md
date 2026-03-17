@@ -28,7 +28,7 @@ Analyses fixtures from the top European leagues, runs a Poisson + Dixon-Coles en
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/soccer_picks.git
+git clone https://github.com/chepe5251/footballAnalytics.git
 cd soccer_picks
 
 python -m venv venv
