@@ -1,0 +1,61 @@
+name: Bug Report
+description: Report a bug in Soccer Picks
+title: "[BUG] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for finding a bug! Please fill out the form below."
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Clear description of the bug"
+      placeholder: "What happened?"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "How to reproduce the issue?"
+      placeholder: |
+        1. Run `python main.py`
+        2. Check logs...
+        3. See error...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: "What should happen?"
+      placeholder: "The system should..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: "Your setup"
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Python: 3.11
+        - Branch: main
+    validations:
+      required: true
+  
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs/Error Output
+      description: "Relevant log output"
+      render: bash
+      placeholder: "Paste any error messages here"
+    validations:
+      required: false

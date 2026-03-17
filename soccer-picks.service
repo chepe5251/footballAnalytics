@@ -1,0 +1,25 @@
+[Unit]
+Description=Soccer Picks Daily Service
+Documentation=file:///home/user/soccer_picks/README.md
+After=network.target
+
+[Service]
+Type=oneshot
+User=user
+Group=user
+WorkingDirectory=/home/user/soccer_picks
+Environment="PATH=/home/user/soccer_picks/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/home/user/soccer_picks/venv/bin/python /home/user/soccer_picks/main.py
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=soccer-picks
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=false
+ProtectSystem=strict
+ReadWritePaths=/home/user/soccer_picks/data
+

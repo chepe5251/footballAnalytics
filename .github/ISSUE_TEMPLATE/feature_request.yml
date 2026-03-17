@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest a new feature
+title: "[FEATURE] "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "Tell us about your feature idea!"
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "What feature would you like?"
+      placeholder: "It would be great if..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: "Why do you need this?"
+      placeholder: "The problem this solves is..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested Solution
+      description: "How should it work?"
+      placeholder: "A possible implementation could be..."
+    validations:
+      required: false
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: "Any other approaches?"
+      placeholder: "Another way could be..."
+    validations:
+      required: false

@@ -1,0 +1,17 @@
+[Unit]
+Description=Soccer Picks Daily Timer (5 AM)
+Documentation=file:///home/user/soccer_picks/README.md
+Requires=soccer-picks.service
+
+[Timer]
+# Run at 5:00 AM every day
+OnCalendar=*-*-* 05:00:00
+
+# Run immediately if the system was off at 5 AM
+Persistent=true
+
+# Run with consistency
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
